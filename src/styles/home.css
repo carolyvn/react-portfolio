@@ -1,0 +1,15 @@
+.home-container {
+    background-image: url(https://media4.giphy.com/media/bcKmIWkUMCjVm/200.webp?cid=ecf05e4736pqazmnv1ti3r4w6vzfeg9cc9wv6yf0sfubul7m&rid=200.webp&ct=g);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.hero {
+    margin: 50px;
+}
+  
+
+  
+  .form-label {
+    justify-content: flex-start;
+  } 

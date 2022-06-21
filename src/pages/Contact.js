@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BsLinkedin, BsGithub, BsStackOverflow } from "react-icons/bs";
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -10,7 +11,7 @@ const Contact = () => {
     const handleSubmit = () => {
         if (name && email && message) {
             const serviceId = 'service_27vi297';
-            const templatedId = 'template_v7nnj8f';
+            const templatedId = 'template_76ajcxg';
             const userId ='HV4FDVvwwd4gXWf-4';
             const templateParams ={
                 name,
@@ -20,7 +21,9 @@ const Contact = () => {
 
             emailjs.send(serviceId, templatedId, templateParams, userId)
               .then(resposne => console.log(resposne))
+              .alert('You message has been sent!')
               .then(error => console.log(error));
+            
             
             setName('');
             setEmail('');
@@ -76,7 +79,12 @@ const Contact = () => {
                     </form>
                 </div>
                 <div className='col-md-6'>
-
+                    <h2>Other places</h2>
+                    <ul>
+                        <li className='contact-link'><a href='https://www.linkedin.com/in/huimei-carol-yan-b25542227/'><BsLinkedin /></a></li>
+                        <li className='contact-link'><a href='https://github.com/carolyvn'><BsGithub /></a></li>
+                        <li className='contact-link'><a href='#'><BsStackOverflow /></a></li>
+                    </ul>
                 </div>
 
     
@@ -86,3 +94,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
